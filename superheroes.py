@@ -8,9 +8,13 @@ class Ability:
         self.name = ability_name
         self.]max_damage = attack_strength
         #pass
+    
     def attack(self):
         return random.randint(0, self.max_damage)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 12a1a62132658e6e590ce2bcc1034a4a5ceaccae
 #ADD CLASS ARMOR-
 class Armor:
     def __init__(self, name, max_block):
@@ -31,7 +35,11 @@ class Hero:
         """
         self.name = name
         self.abilities = []
+<<<<<<< HEAD
         self.armor = []
+=======
+        self.starting_armor = []
+>>>>>>> 12a1a62132658e6e590ce2bcc1034a4a5ceaccae
         self.starting_health = starting_health
         self.current_health= starting_health
         self.kills = 0
@@ -42,7 +50,11 @@ class Hero:
         self.abilities.append(ability)
 
     def add_armor(self, armor):
+<<<<<<< HEAD
         self.armor.append(armor)
+=======
+        self.armors.append(armor)
+>>>>>>> 12a1a62132658e6e590ce2bcc1034a4a5ceaccae
 
     def add_weapon(self, weapon):
         self.abilities.append(weapon)
@@ -61,11 +73,16 @@ class Hero:
     
     def defend(self):
         total_defense = 0
+<<<<<<< HEAD
         for armor in self.armor:
+=======
+        for armor in self.starting_armor:
+>>>>>>> 12a1a62132658e6e590ce2bcc1034a4a5ceaccae
             total_defense += armor.block()
         return total_defense
 
     def take_damage(self, damage):
+<<<<<<< HEAD
         damage -= self.defend()
         if damage < 0:
             damage =0
@@ -137,6 +154,12 @@ Class Team:
 
 
 
+=======
+        self.damage -= self.defend()
+        if damage < 0:
+            damage =0
+        self.current_health -= damage
+>>>>>>> 12a1a62132658e6e590ce2bcc1034a4a5ceaccae
 
 
 
@@ -158,6 +181,7 @@ if __name__ == "__main__":
     # hero.add_ability(ability)
     # print(hero.abilities)
 
+<<<<<<< HEAD
 #testing take_damage
     # # hero = Hero("Grace Hopper", 200)
     # sheild = Armor("Shield", 50)
@@ -172,6 +196,15 @@ if __name__ == "__main__":
     hero.take_damage(15000)
     print(hero.is_alive())
 
+=======
+    
+    ability = Ability("Great Debugging", 50)
+    another_ability = Ability("Smarty Pants", 90)
+    hero = Hero("Grace Hopper", 200)
+    hero.add_ability(ability)
+    hero.add_ability(another_ability)
+    print(hero.attack())
+>>>>>>> 12a1a62132658e6e590ce2bcc1034a4a5ceaccae
 
 
 
